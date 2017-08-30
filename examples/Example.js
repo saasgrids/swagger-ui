@@ -1,6 +1,6 @@
 import React from 'react';
-
-import MyComponent from '../src/index';
+import SGSwagger from '../src/index';
+const config    =  '/swagger.json';
 
 class Example extends React.Component {
     constructor(props) {
@@ -8,13 +8,12 @@ class Example extends React.Component {
     }
 
     componentDidMount() {
-        console.log('test');
     }
 
     render() {
         return (
             <div>
-                <MyComponent />
+                <SGSwagger url={config} code_url='/code_snippets.json'/>
             </div>
         )
     }
