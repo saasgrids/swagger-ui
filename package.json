@@ -1,6 +1,7 @@
 {
   "name": "sg-swagger-ui",
   "version": "1.0.3",
+  "repository": "https://github.com/saasgrids/swagger-ui",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
     "release": "webpack --p --config webpack.config.babel.js",
