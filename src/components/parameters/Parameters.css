@@ -1,0 +1,58 @@
+.sg-ui-doc-subtitle{
+    font: 400 20px/32px Roboto,sans-serif
+}
+
+.sg-ui-parameters-title{
+    background-color: #78909c;
+    color: #ffffff;
+}
+.sg-ui-parameter-item{
+    background-color: #F0F3F5;
+    border-bottom: 1px solid #CAD3D6;
+}
+
+.sg-ui-parameter-description{
+    font-size: 14px;
+    color: #5E676A;
+}
+
+.sg-ui-parameter-type{
+    font-size: 13px;
+    background-color: #CAD3D6;
+    
+}
+
+.sg-ui-parameter-text{
+    color: #5E676A;
+    font: 14px/20px Roboto Mono,monospace
+}
+
+.grid-container{
+    width: 100%; 
+    max-width: 1200px;      
+}
+
+/*-- our cleafix hack -- */ 
+.row:before, 
+.row:after {
+    content:"";
+      display: table ;
+    clear:both;
+}
+
+[class*='col-'] {
+    float: left; 
+    min-height: 1px; 
+    width: 16.66%; 
+    /*-- our gutter -- */
+    padding: 12px; 
+}
+
+.col-1{ width: 16.65%; }
+.col-2{ width: 33.32%; }
+.col-3{ width: 50%;    }
+.col-4{ width: 66.65%; }
+.col-5{ width: 83.32%; }
+.col-6{ width: 100%;   }
+
+

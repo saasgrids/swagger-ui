@@ -1,0 +1,69 @@
+.sg-ui-rest-client{
+    background-color: #78909c;
+    display: block;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;  
+    color: #EAEFF2;
+    height: 100vmax;
+}
+
+.sg-ui-rest-client-title{
+    background-color: #3B5E6F;
+    color: #EAEFF2;
+    align-content: center;
+    padding: 7px;
+    padding-left: 15px;
+    font: 300 18px/40px Roboto,sans-serif;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+}
+
+.sg-ui-rest-client-content{
+}
+.sg-ui-rest-url{
+    margin-top:50px;
+    padding: 10px;    
+    font: 14px/20px Roboto Mono,monospace;
+    border-bottom: #dddddd solid 1px;
+    border-top: #dddddd solid 1px;
+    max-width: 400px;
+    position: relative;
+    word-wrap: break-word;
+    
+}
+
+.sg-ui-rest-method{
+    border: 1px solid #dddddd;
+    padding: 5px;
+    text-transform: uppercase;
+    margin: 5px;
+    border-radius: 2px;
+    margin-right: 30px;
+}
+
+.sg-ui-params-tab{
+    position: relative;
+    height: 50px;
+    max-width: 26%;
+    background-color: #3b5e6f;
+    margin: 20px;
+    padding: 3px;
+}
+
+.sg-ui-params-tab::before,
+.sg-ui-params-tab::after{
+    content:"";
+    display: table ;
+    clear:both;
+}
+.sg-ui-params-tab-item{
+    background-color: #C2CFD5;
+    width: 32.2%;
+    margin: 2px;
+    height: 90%;
+    float: left;     
+}
+.sg-ui-params-tab-item-selected{
+    background-color: #3b5e6f !important;    
+}

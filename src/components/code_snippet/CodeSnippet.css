@@ -1,0 +1,38 @@
+.sg-ui-code-heading{
+    color: #757575;
+    font: 300 24px/40px Roboto,sans-serif;
+    letter-spacing: -.01em;
+    margin: 40px 0 20px;
+    text-transform: capitalize;
+    border-bottom: #dddddd solid 1px;
+}
+
+.sg-ui-code-container{
+    border: #dddddd solid 1px;
+}
+
+.sg-ui-code-tabs{
+    border-bottom: #dddddd solid 1px;
+    padding: 0px;
+}
+
+.sg-ui-code-tabs-item{
+    margin: 0px;
+    font: 500 14px/43px Roboto,sans-serif;
+    color: #757575;
+    text-transform:uppercase;    
+    padding: 10px;
+    cursor: pointer;
+}
+.sg-ui-code-tabs-item-selected{
+    border-bottom: #03a0e9 solid 4px;    
+}
+
+.sg-ui-code-snippet{
+    font: 14px/20px Roboto Mono,monospace;
+    line-height: 200%;    
+    padding: 30px;
+    margin: 0px;
+    background-color: #fafafa;
+}
+

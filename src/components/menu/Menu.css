@@ -1,0 +1,52 @@
+.sg-ui-menu-bar{
+    max-height: 420px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 2%;
+    background-color: #f7f7f7;
+    min-width: 250px;
+    position: fixed;
+    
+}
+
+.sg-ui-menu-container{
+    margin-top:100px;
+}
+.sg-ui-menu-item{
+    padding: 5px;
+    padding-left: 30px;
+    width: 78%;
+    display: block;
+}
+.sg-ui-menu-item-text{
+    font-size: 13px;
+    color: #3a3a3a;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.sg-ui-submenu{
+    padding: 5px;
+    padding-left: 10px;
+    width: 78%;
+    display: block;
+}
+
+.sg-ui-submenu-item{
+    padding: 5px;
+    display: block;
+    font-size: 13px;
+    color: #3a3a3a;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sg-ui-menu-arrow{
+    font-size: 8px;
+}
+
+
+.sg-ui-submenu-item-selected{
+    color: #1EA1ED;
+    font-weight: normal;        
+}
