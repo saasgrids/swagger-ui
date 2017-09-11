@@ -34,7 +34,10 @@ export default () => ({
         contentBase: path.resolve(__dirname, 'dist'),
         // match the output path
 
-        publicPath: '/'
+        publicPath: '/',
+        
+        historyApiFallback: true
+    
         // match the output `publicPath`
     },
 

@@ -16,6 +16,7 @@ class Doc extends React.Component{
         return(
             <div className='.sg-ui-doc-main row'>
                 <div className='sg-ui-doc col-d'>
+                    <div className='sg-ui-doc-text'>
                     <h1>
                         <span className='sg-ui-doc-heading-class'>{this.props.endpoint.tags[0] +' :: '}</span>
                         <span className='sg-ui-doc-heading-function'>{this.props.endpoint.operationId}</span>
@@ -51,6 +52,7 @@ class Doc extends React.Component{
                         />:
                         <p>Do not supply a request body with this method.</p>
                     }
+                    </div>
 
                     {this.props.code && this.props.code[this.props.endpoint.operationId] ?
                         <CodeSnippet code={this.props.code[this.props.endpoint.operationId]}/>:
@@ -60,8 +62,9 @@ class Doc extends React.Component{
                 </div>
                 <div className='col-r .sg-ui-rest'>
                     <RestClient 
-                    endpoint={this.props.endpoint}
-                    url={'http://' + this.props.host+ this.props.basePath + this.props.endpoint.path}
+                        endpoint={this.props.endpoint}
+                        definitions={this.props.definitions}
+                        url={'http://' + this.props.host+ this.props.basePath + this.props.endpoint.path}
                     />
                 </div>
             </div>

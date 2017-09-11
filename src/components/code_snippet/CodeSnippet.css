@@ -17,6 +17,8 @@
 }
 
 .sg-ui-code-tabs-item{
+    font-family: Roboto;
+    
     margin: 0px;
     font: 500 14px/43px Roboto,sans-serif;
     color: #757575;
@@ -29,10 +31,6 @@
 }
 
 .sg-ui-code-snippet{
-    font: 14px/20px Roboto Mono,monospace;
-    line-height: 200%;    
-    padding: 30px;
-    margin: 0px;
-    background-color: #fafafa;
+    font-size: 14px;
 }
 

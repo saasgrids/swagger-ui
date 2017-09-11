@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Example from './Example';
-import { AppContainer } from 'react-hot-loader';
 import './index.css';
 
 import { 
@@ -12,22 +11,6 @@ import {
 } from 'react-router-dom';
 // AppContainer is a necessary wrapper component for HMR
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component/>
-    </AppContainer>,
-    document.getElementById('root')
-  );
-};
-
-
-// Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./Example', () => {
-    render(Example)
-  });
-}
 
 const MainRouter =()=>(
   <Switch>
@@ -40,5 +23,10 @@ const App =()=>(
     <MainRouter/>
   </Router>
 )
+
+
+ReactDOM.render(
   
-render(App);
+  <App/>,
+document.getElementById('root')
+);

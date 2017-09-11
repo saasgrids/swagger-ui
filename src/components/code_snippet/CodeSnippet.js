@@ -1,7 +1,7 @@
 import React from 'react';
 import './CodeSnippet.css';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneLight } from 'react-syntax-highlighter/dist/styles';
+import { googlecode } from 'react-syntax-highlighter/dist/styles';
 
 class CodeSnippet extends React.Component{
 
@@ -42,7 +42,7 @@ class CodeSnippet extends React.Component{
                         ))}
                     </div>
                     <div className='sg-ui-code-snippet'>
-                        <SyntaxHighlighter language={this.state.selected.lang} style={atomOneLight}>{this.getCode()}</SyntaxHighlighter>
+                        <SyntaxHighlighter language={this.state.selected.lang} style={googlecode} showLineNumbers={true}>{this.getCode()}</SyntaxHighlighter>
                     </div>
                 </div>
             </div>

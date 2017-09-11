@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: column;  
 }
+.sg-ui-doc-text{
+    font-family: Roboto;
+}
 .sg-ui-doc-main{
     padding: 0px !important;
     display: flex;

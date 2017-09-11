@@ -6,6 +6,8 @@
     flex-direction: column;  
     color: #EAEFF2;
     height: 100vmax;
+    font-family: Roboto;
+    
 }
 
 .sg-ui-rest-client-title{
@@ -49,6 +51,7 @@
     background-color: #3b5e6f;
     margin: 20px;
     padding: 3px;
+    border-radius: 4px;
 }
 
 .sg-ui-params-tab::before,
@@ -59,11 +62,79 @@
 }
 .sg-ui-params-tab-item{
     background-color: #C2CFD5;
-    width: 32.2%;
+    min-width: 16.4%;
+    height: 33px;
     margin: 2px;
-    height: 90%;
-    float: left;     
+    float: left;
+    padding: 6px;
+    font: 14px/32px Roboto Mono,sans-serif;
+    color: #3b5e6f;
+    text-transform: capitalize;
+    padding-left: 22px;
+    cursor: pointer;
+    border-radius: 2px;    
+}
+.sg-ui-params-tab-item:hover{
+    background-color: #B0BCC2;   
+    color: #FFFFFF;
+    font-weight: bolder;
 }
 .sg-ui-params-tab-item-selected{
-    background-color: #3b5e6f !important;    
+    background-color: #3b5e6f !important;  
+    color:  #C2CFD5;
+}
+.sg-ui-pointer{
+    cursor: pointer;
+}
+
+.sg-ui-params{
+    position: relative;
+    height: 50px;
+    max-width: 26%;
+    margin: 20px;
+    padding: 3px;
+    border-radius: 4px;
+}
+.sg-ui-params-item{
+    background-color:  #F8F8F8;
+    color: #3b5e6f;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    
+}
+.sg-ui-params-item:hover{
+    background-color:  #E8E8E8;
+
+}
+
+.sg-ui-params-item:nth-child(1){
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.sg-ui-params-item:nth-last-child(1){
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+input[type=text].sg-ui-params-text{
+    width: 42%;
+    margin: 2px;
+    border: none;
+    height: 20px;
+    border-radius: 3px;
+    
+}
+
+.sg-ui-request-body{
+    height: 300px;
+    width: 100%;
+}
+.sg-ui-err{
+    width: 100%;
+    padding: 10px;
+    background-color: #FF5555;
+    color: #ffffff;
+    position: relative;
+    border-radius: 5px;    
 }
