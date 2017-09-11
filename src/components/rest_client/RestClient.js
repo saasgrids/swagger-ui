@@ -106,7 +106,7 @@ class RestClient extends React.Component{
                 </div>
                 <div className='sg-ui-rest-url'>
                     <span className='sg-ui-rest-method'>{this.props.endpoint.method}</span>
-                    {this.getUrl()}
+                    <span className='sg-ui-url'>{this.getUrl()}</span>
                 </div>
                 <div className='sg-ui-params-tab'>
                    <span> 
