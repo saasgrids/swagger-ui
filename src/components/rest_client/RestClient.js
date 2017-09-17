@@ -1,6 +1,7 @@
 import React from 'react';
 import  './RestClient.css';
 import InputGroup from './InputGroup'
+import axios from 'axios';
 
 
 class RestClient extends React.Component{
@@ -13,13 +14,40 @@ class RestClient extends React.Component{
             header:[],
             path: getParamsValue(this.props.endpoint.parameters, 'path'),
             selectedTab : 'path',
-            bodyErr : null
+            bodyErr : null,
+            response: null
         }
         this.setState(state)
 
       
     }
 
+    makeRequest(){
+        var self = this;
+        axios(this.getUrl(),{
+            method: this.props.endpoint.method,
+            url: this.getUrl(),
+            data: this.state.body,
+            headers: this.getHeaders(),
+          }).then(function (data) {
+              
+              self.setState({
+                  response : JSON.stringify(data.data, null, 4)
+              })
+          }).catch(function (err) {
+              self.setState({bodyErr: err.message});
+          })
+          
+    }
+
+    getHeaders(){
+        var headerObj = {};
+        this.state.header.forEach((header)=>{
+            if(header.enabled)
+                headerObj[header.key] = header.value;
+        })
+        return headerObj;
+    }
     
     getTabClassName(item){
         if(item == this.state.selectedTab){
@@ -44,10 +72,8 @@ class RestClient extends React.Component{
         var url = this.props.url;
         var params = url.match(/\{[^}]*\}/g);
         if(params){
-            console.log(params)
             params.forEach((param)=>{
                 var key = param.substr(1, param.length-2);
-                console.log(!!this.state.path.find((path) =>(path.key == key)))
                 var pathObject = this.state.path.find((path) =>(path.key == key));
                 if(!!pathObject && !!pathObject.value){
                     url = url.replace(param, pathObject.value)
@@ -68,7 +94,6 @@ class RestClient extends React.Component{
         newObj[index][key] = newVal;
         var newState = {};
         newState[type] = newObj;
-        console.log(newState)
         this.setState(newState)
     }
     addField(){
@@ -180,8 +205,20 @@ class RestClient extends React.Component{
                         <div className='sg-ui-err'> {this.state.bodyErr}</div>
                         :null
                     }
+
+                    <div className='sg-ui-request-btn' onClick={this.makeRequest.bind(this)}>Make Request</div>
                     
+                    {this.state.response ?
+                                <textarea  
+                                    defaultValue={this.state.response}
+                                    className='sg-ui-request-body'
+                                    onChange={this.bodyChange.bind(this)}
+                                    onBlur={this.validateBody.bind(this)}
+                                />
+                                :null}
                 </div>
+
+               
             </div>
         )
     }

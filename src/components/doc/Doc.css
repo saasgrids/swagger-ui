@@ -47,6 +47,7 @@
 }
 
 .sg-ui-doc-summary{
+    line-height: 30px;
     color: #3a3a3a;    
 }
 
@@ -83,6 +84,16 @@
     padding: 12px; 
 }
 
+.sg-ui-doc-licence{
+    margin-top: 20px;
+}
+.sg-ui-doc-version{
+    margin: 10px;
+    background: #909090;
+    color: #dddddd;
+    padding: 5px;
+    border-radius: 5px;
+}
 .col-r{ width: 30.32%; padding: 0px; height: 100%;}
 .col-d{ width: 66.65%; }
 

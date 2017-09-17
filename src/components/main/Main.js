@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '../menu/Menu';
 import Doc from '../doc/Doc';
+import OverView from '../doc/Overview';
 import { Route, Switch } from 'react-router-dom'
 
 import './Main.css'
@@ -43,6 +44,14 @@ class Main extends React.Component {
                                     )} key={i}/>
                             ))
                         }
+
+                        <Route path='/' render={() => (
+                            <OverView  
+                                info={this.props.spec.info}
+                                authentication={this.props.spec.securityDefinitions}
+                            />)}
+                        />
+
                     </Switch>
                 </div>
 

@@ -37,7 +37,8 @@ const Param = (props)=>(
                 props.params[props.type].map((param, i)=> (
                     <div className='row sg-ui-parameter-item' key={i}>
                         <div className='col-1 sg-ui-parameter-text'>
-                            <div>{param.name}</div>
+                            <span>{param.name}</span>
+                            {param.required ? <span className='sg-ui-parameter-req'><sup>*</sup></span>: null}
                         </div>
                         <div className='col-1 sg-ui-parameter-text'>
                         {param.type}

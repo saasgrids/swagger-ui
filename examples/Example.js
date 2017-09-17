@@ -14,7 +14,6 @@ class Example extends React.Component {
         axios.get(config).then(function (res) {
 
             if(code_url){
-                console.log('Got Data', res.data)
                 axios.get(code_url).then(function (code) {
                     self.setState({
                         spec : res.data,

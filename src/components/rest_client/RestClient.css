@@ -135,12 +135,37 @@ input[type=text].sg-ui-params-text{
 .sg-ui-request-body{
     height: 300px;
     width: 100%;
+    border-radius: 3px;
+    border: none !important;
+    background-color: #C2CFD5;
+    padding: 4%;
+    width: 94%;
+    line-height: 16px;
 }
 .sg-ui-err{
-    width: 100%;
-    padding: 10px;
+    padding: 4%;
+    width: 94%;
     background-color: #FF5555;
     color: #ffffff;
     position: relative;
-    border-radius: 5px;    
+    border-radius: 5px; 
+}
+
+.sg-ui-request-btn{
+    background-color: #3b5e6f !important;  
+    color:  #C2CFD5;
+    padding-top: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    height: 30px;    
+    box-shadow: #465156 1px 1px 4px 2px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: Roboto;
+    cursor: pointer;
+}
+.sg-ui-request-btn:active{
+    background-color: #817171 !important;  
+    
 }

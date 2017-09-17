@@ -8,7 +8,6 @@ import './Doc.css'
 class Doc extends React.Component{
 
     isBodyNeeded(){
-        console.log(this.props)
         return this.props.endpoint.parameters.filter((param)=>(param.in=='body')).length >0;
     }
 
